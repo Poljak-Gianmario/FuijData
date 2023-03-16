@@ -24,7 +24,7 @@ const NestedMenu = () => {
 
   return (
     <div onClick={handleRightClick}>
-      <Typography>DATI PER SETTORE</Typography>
+      <Typography>ALL DATA</Typography>
       <Menu
         open={!!menuPosition}
         onClose={() => setMenuPosition(null)}
@@ -37,21 +37,18 @@ const NestedMenu = () => {
           parentMenuOpen={!!menuPosition}
           onClick={handleItemClick}
         >
-          <MenuItem onClick={handleItemClick}>Insegnanti</MenuItem>
           <MenuItem onClick={handleItemClick}>Studenti</MenuItem>
           <MenuItem onClick={handleItemClick}>Struttura scolastica</MenuItem>
-          <MenuItem onClick={handleItemClick}>Disuguagliazne</MenuItem>
 
           <NestedMenuItem
             label="Test standardizzati"
             parentMenuOpen={!!menuPosition}
             onClick={handleItemClick}
           >
-            <MenuItem onClick={handleItemClick}>PISA</MenuItem>
-            <MenuItem onClick={handleItemClick}>INVALSI</MenuItem>
+            <MenuItem onClick={handleItemClick}>Pisa</MenuItem>
+            <MenuItem onClick={handleItemClick}>Invalsi</MenuItem>
           </NestedMenuItem>
         </NestedMenuItem>
-        <MenuItem onClick={handleItemClick}>Didattica</MenuItem>
         <NestedMenuItem
           label="Povertà"
           parentMenuOpen={!!menuPosition}
